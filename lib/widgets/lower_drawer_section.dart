@@ -1,4 +1,5 @@
 import 'package:financial_dashboard/utils/app_styles.dart';
+import 'package:financial_dashboard/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -17,7 +18,7 @@ class LowerDrawerSection extends StatelessWidget {
         children: [
           Expanded(child: SizedBox(height: 20)),
 
-          SvgPicture.asset(Assets.resourceImagesSpaceCloud),
+          SvgPicture.asset(Assets.imagesSpaceCloud),
           const SizedBox(height: 8),
           Text(
             'Give your money\n awesome space in cloud',
@@ -27,31 +28,9 @@ class LowerDrawerSection extends StatelessWidget {
             ).copyWith(color: const Color(0xFF404040)),
           ),
           SizedBox(height: 8),
-          ElevatedButton(
-
-            style: ElevatedButton.styleFrom(
-              padding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(14),
-              ),
-              backgroundColor: const Color(0xFFFFC145),
-            ),
-            onPressed: () {},
-            child: FittedBox(
-              fit:  BoxFit.scaleDown ,
-              child: Row(
-                mainAxisAlignment: .center,
-                mainAxisSize: .min,
-                children: [
-                  Text(
-                    'Upgrade to premium',
-                    style: AppStyles.styleBold14(context),
-                  ),
-                  SizedBox(width: 4,),
-                  Icon(Icons.arrow_upward,color: Colors.black,),
-                ],
-              ),
-            ),
+          CustomButton(
+            text: 'Upgrade to premium',
+            iconData: Icons.arrow_upward,
           ),
         ],
       ),

@@ -10,12 +10,15 @@ class CustomDrawerHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: Image.asset(
-        Assets.resourceImagesCloudCash,
+        Assets.imagesCloudCash,
         height: 28,
         fit: BoxFit.contain,
       ),
 
-      title: Text('cloudCash', style: AppStyles.styleBold18(context)),
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Text('cloudCash', style: AppStyles.styleBold18(context)),
+      ),
     );
   }
 }
