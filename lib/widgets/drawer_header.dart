@@ -15,9 +15,12 @@ class CustomDrawerHeader extends StatelessWidget {
         fit: BoxFit.contain,
       ),
 
-      title: FittedBox(
-        fit: BoxFit.scaleDown,
-        child: Text('cloudCash', style: AppStyles.styleBold18(context)),
+      title: Align(
+        alignment: Alignment.centerLeft,
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text('cloudCash', style: AppStyles.styleBold18(context)),
+        ),
       ),
     );
   }

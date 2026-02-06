@@ -22,12 +22,17 @@ class DrawerItem extends StatelessWidget {
             ? ColorFilter.mode(const Color(0xFF197BBD), BlendMode.srcIn)
             : ColorFilter.mode(const Color(0xFFC7C7C7), BlendMode.srcIn),
       ),
-      title: FittedBox(
-        fit: BoxFit.scaleDown,
-        child: Text(
-          drawerItemModel.text,
-          style: AppStyles.styleBold14(context).copyWith(
-            color: isActive ? const Color(0xFF197BBD) : const Color(0xFFC7C7C7),
+      title: Align(
+        alignment: Alignment.centerLeft,
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            drawerItemModel.text,
+            style: AppStyles.styleBold14(context).copyWith(
+              color: isActive
+                  ? const Color(0xFF197BBD)
+                  : const Color(0xFFC7C7C7),
+            ),
           ),
         ),
       ),
