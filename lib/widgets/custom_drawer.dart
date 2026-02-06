@@ -11,22 +11,18 @@ class CustomDrawer extends StatelessWidget {
     double width = MediaQuery.sizeOf(context).width;
 
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 30,horizontal: 20),
-      width: width*.16,
-     color: const Color(0xFFF8F8F8),
+      padding: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+      width: width * .16,
+      color: const Color(0xFFF8F8F8),
       child: CustomScrollView(
         slivers: [
-SliverToBoxAdapter(
-  child: CustomDrawerHeader(),
-),
-          const SliverToBoxAdapter(
-          child: SizedBox(height: 60,),
-          ),
+          SliverToBoxAdapter(child: CustomDrawerHeader()),
+          const SliverToBoxAdapter(child: SizedBox(height: 60)),
           DrawerListView(),
           SliverFillRemaining(
             hasScrollBody: false,
             child: LowerDrawerSection(),
-          )
+          ),
         ],
       ),
     );

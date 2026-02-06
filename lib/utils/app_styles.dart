@@ -18,6 +18,7 @@ abstract class AppStyles {
       fontWeight: FontWeight.w700,
     );
   }
+
   static TextStyle styleBold14(BuildContext context) {
     return TextStyle(
       color: const Color(0xFF404040),
@@ -25,6 +26,7 @@ abstract class AppStyles {
       fontWeight: FontWeight.w700,
     );
   }
+
   static TextStyle styleBold18(BuildContext context) {
     return TextStyle(
       color: const Color(0xFF0F4264),

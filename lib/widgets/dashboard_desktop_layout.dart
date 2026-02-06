@@ -6,18 +6,15 @@ class DashboardDesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(59),
-        color: Colors.white
+        color: Colors.white,
       ),
       child: Row(
         children: [
           Expanded(child: CustomDrawer()),
-          Expanded(
-
-              flex: 6,
-              child: Container())
+          Expanded(flex: 6, child: Container()),
         ],
       ),
     );
