@@ -1,4 +1,5 @@
 import 'package:financial_dashboard/widgets/custom_drawer.dart';
+import 'package:financial_dashboard/widgets/weekly_sum_up_section.dart';
 import 'package:flutter/material.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
@@ -11,10 +12,17 @@ class DashboardDesktopLayout extends StatelessWidget {
         borderRadius: BorderRadius.circular(59),
         color: Colors.white,
       ),
-      child: Row(
+      child:  Row(
         children: [
           Expanded(child: CustomDrawer()),
-          Expanded(flex: 6, child: Container()),
+          Expanded(flex: 3, child: CustomScrollView(
+        slivers:[
+          SliverToBoxAdapter(
+
+            child:  WeeklySumUpSection(),
+          )
+        ]
+        )),
         ],
       ),
     );

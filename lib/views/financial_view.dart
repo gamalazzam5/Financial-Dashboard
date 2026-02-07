@@ -11,8 +11,8 @@ class FinancialView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: AdaptiveLayout(
-        mobileLayout: (context) => SizedBox(),
-        tabletLayout: (context) => SizedBox(),
+        mobileLayout: (context) => DashboardDesktopLayout(),
+        tabletLayout: (context) => DashboardDesktopLayout(),
         desktopLayout: (context) => DashboardDesktopLayout(),
       ),
     );
