@@ -31,7 +31,13 @@ Responsive behavior is handled using:
 - Custom breakpoints
 - Conditional widgets per screen size
 
----
+  ---
 
-## 🧠 Architecture
+## 🛠️ Technologies Used
 
+- **Flutter**
+- **Dart**
+- **Material Design**
+- **flutter_svg**
+- Clean UI practices
+- Responsive layout patterns
