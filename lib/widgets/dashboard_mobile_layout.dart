@@ -1,0 +1,19 @@
+import 'package:financial_dashboard/widgets/weekly_sum_up_portable.dart';
+import 'package:flutter/material.dart';
+
+class DashboardMobileLayout extends StatelessWidget {
+  const DashboardMobileLayout({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(59),
+        color: Colors.white,
+      ),
+      child: CustomScrollView(
+        slivers: [SliverToBoxAdapter(child: WeeklySumUpPortable())],
+      ),
+    );
+  }
+}

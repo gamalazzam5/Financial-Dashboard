@@ -1,75 +1,23 @@
+import 'package:financial_dashboard/utils/size_config.dart';
+import 'package:financial_dashboard/widgets/transaction_row_desktop.dart';
+import 'package:financial_dashboard/widgets/transaction_row_mobile.dart';
 import 'package:flutter/material.dart';
+
 import '../models/transaction_model.dart';
-import '../utils/app_styles.dart';
 
 class TransactionRowItem extends StatelessWidget {
-  const TransactionRowItem({
-    super.key,
-    required this.model,
-  });
+  const TransactionRowItem({super.key, required this.model});
 
   final TransactionModel model;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 12),
-      child: Row(
-        children: [
-          Expanded(
-            flex: 3,
-            child: Row(
-              children: [
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFF5F5F5),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Icon(model.icon, size: 18),
-                ),
-                const SizedBox(width: 12),
-                Text(
-                  model.receiver,
-                  style: AppStyles.styleRegular14(context).copyWith(color: Color(0xFF404040)),
-                ),
-              ],
-            ),
-          ),
+    final width = MediaQuery.sizeOf(context).width;
 
-          // Type
-          Expanded(
-            flex: 2,
-            child: Text(
-              model.type,
-              style: AppStyles.styleRegular14(context)
-                  .copyWith(color: const Color(0xFFAEAEAE)),
-            ),
-          ),
-
-          // Date
-          Expanded(
-            flex: 2,
-            child: Text(
-              model.date,
-              style: AppStyles.styleRegular14(context)
-                  .copyWith(color: const Color(0xFFAEAEAE)),
-            ),
-          ),
-
-          // Amount
-          Expanded(
-            flex: 1,
-            child: Text(
-              model.amount,
-              textAlign: TextAlign.end,
-              style: AppStyles.styleSemiBold16(context).copyWith(
-                color: const Color(0xFF404040)
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
+    if (width < SizeConfig.tablet) {
+      return TransactionRowMobile(model: model);
+    } else {
+      return TransactionRowDesktop(model: model);
+    }
   }
 }

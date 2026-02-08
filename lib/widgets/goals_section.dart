@@ -10,6 +10,9 @@ class GoalsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.sizeOf(context).width;
+    final isMobile = width < 600;
+
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
       child: Column(
@@ -23,12 +26,18 @@ class GoalsSection extends StatelessWidget {
           SizedBox(height: 30),
           OutcomeStatistics(),
           SizedBox(height: 30),
-          Row(
+          isMobile
+              ? Column(
             children: [
-              Expanded(
-                  flex: 2,
-                  child: NewTransaction()),
-              SizedBox(width: 12),
+              NewTransaction(),
+              const SizedBox(height: 16),
+              LoanContainer(),
+            ],
+          )
+              : Row(
+            children: [
+              Expanded(flex: 2, child: NewTransaction()),
+              const SizedBox(width: 12),
               Expanded(child: LoanContainer()),
             ],
           ),

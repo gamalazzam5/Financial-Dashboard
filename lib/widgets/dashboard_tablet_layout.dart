@@ -1,5 +1,5 @@
 import 'package:financial_dashboard/widgets/weekly_sum_up_section.dart';
-import 'package:financial_dashboard/widgets/weekly_sum_up_tablet.dart';
+import 'package:financial_dashboard/widgets/weekly_sum_up_portable.dart';
 import 'package:flutter/material.dart';
 
 import 'custom_drawer.dart';
@@ -20,7 +20,7 @@ class DashboardTabletLayout extends StatelessWidget {
           Expanded(
             flex: 4,
             child: CustomScrollView(
-              slivers: [SliverToBoxAdapter(child: WeeklySumUpTablet())],
+              slivers: [SliverToBoxAdapter(child: WeeklySumUpPortable())],
             ),
           ),
         ],

@@ -57,7 +57,7 @@ static const List<CardModel> cardData = [
                   subTitle: cardData[itemIndex].subTitle,
                 );
               } else {
-                return const SizedBox(width: 45);
+                return const SizedBox(width: 30);
               }
             }
           ),),

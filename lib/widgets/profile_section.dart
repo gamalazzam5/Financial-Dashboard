@@ -12,37 +12,28 @@ class ProfileSection extends StatelessWidget {
     return FittedBox(
       fit: BoxFit.scaleDown,
       child: Row(
-        mainAxisSize: .min,
+        mainAxisSize: .min
+        ,
         children: [
-          Icon(Icons.email_rounded,color: const Color(0xFFAEAEAE),),
-          SizedBox(width: 20,),
-          Icon(Icons.notifications,color: const Color(0xFFAEAEAE),),
-          SizedBox(width: 20,),
-          Row(
-            mainAxisSize: .min
-            ,
+          CircleAvatar(
+            backgroundColor: const Color(0xFFFFC145),
+            child: SvgPicture.asset(Assets.imagesProfile,fit: BoxFit.fill,),
+          ),
+          SizedBox(width: 8,),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
             children: [
-              CircleAvatar(
-                backgroundColor: const Color(0xFFFFC145),
-                child: SvgPicture.asset(Assets.imagesProfile,fit: BoxFit.fill,),
+              Text(
+                'Andrew',
+                style: AppStyles.styleSemiBold16(context)
+                    .copyWith(color: const Color(0xFF404040)),
               ),
-              SizedBox(width: 8,),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    'Andrew',
-                    style: AppStyles.styleSemiBold16(context)
-                        .copyWith(color: const Color(0xFF404040)),
-                  ),
-                  Text(
-                    'Admin account',
-                    style: AppStyles.styleRegular14(context)
-                        .copyWith(color: const Color(0xFFAEAEAE)),
-                  ),
-                ],
-              )
+              Text(
+                'Admin account',
+                style: AppStyles.styleRegular14(context)
+                    .copyWith(color: const Color(0xFFAEAEAE)),
+              ),
             ],
           )
         ],

@@ -1,3 +1,4 @@
+import 'package:financial_dashboard/utils/size_config.dart';
 import 'package:financial_dashboard/widgets/transaction_header.dart';
 import 'package:financial_dashboard/widgets/transaction_row_item.dart';
 import 'package:flutter/material.dart';
@@ -35,6 +36,7 @@ class TransactionHistorySection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.sizeOf(context).width;
     return CustomContainer(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 18),
@@ -43,26 +45,22 @@ class TransactionHistorySection extends StatelessWidget {
           children: [
             Text(
               'Transaction history',
-              style: AppStyles.styleSemiBold20(context)
-                  .copyWith(color: const Color(0xFF404040)),
+              style: AppStyles.styleSemiBold20(
+                context,
+              ).copyWith(color: const Color(0xFF404040)),
             ),
 
             const SizedBox(height: 16),
-           TransactionHeaderRow(),
-            ...List.generate(
-              transactions.length,
-                  (index) {
-                return Column(
-                  children: [
-                    TransactionRowItem(
-                      model: transactions[index],
-                    ),
-                    if (index != transactions.length - 1)
-                      const Divider(height: 1),
-                  ],
-                );
-              },
-            ),
+            if (width >= SizeConfig.tablet) TransactionHeaderRow(),
+            ...List.generate(transactions.length, (index) {
+              return Column(
+                children: [
+                  TransactionRowItem(model: transactions[index]),
+                  if (index != transactions.length - 1)
+                    const Divider(height: 1),
+                ],
+              );
+            }),
           ],
         ),
       ),

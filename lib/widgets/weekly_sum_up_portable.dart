@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'card_section_with_transaction_history.dart';
 import 'goals_section.dart';
 
-class WeeklySumUpTablet extends StatelessWidget {
-  const WeeklySumUpTablet({super.key});
+class WeeklySumUpPortable extends StatelessWidget {
+  const WeeklySumUpPortable({super.key});
 
   @override
   Widget build(BuildContext context) {

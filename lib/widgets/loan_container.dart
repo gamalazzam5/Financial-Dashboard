@@ -17,19 +17,33 @@ class LoanContainer extends StatelessWidget {
       child: Column(
         children: [
           ConstrainedBox(
-            constraints: BoxConstraints(maxHeight: 140),
+            constraints: BoxConstraints(maxHeight: 130),
             child: SvgPicture.asset(Assets.imagesLoanEffect),
           ),
-          Align(
-            alignment: .centerLeft,
-            child: Padding(
-              padding: .only(left: 16, bottom: 8),
-              child: Text(
-                'Get great\nloan!',
-                style: AppStyles.styleSemiBold20(
-                  context,
-                ).copyWith(color: Colors.white),
-              ),
+          Padding(
+            padding: .only(left: 16, bottom: 8),
+
+            child: Column(
+              crossAxisAlignment: .start,
+              children: [
+                Text(
+                  'Get great',
+                  style: AppStyles.styleSemiBold20(
+                    context,
+                  ).copyWith(color: Colors.white),
+                ),
+                Row(
+                  children: [
+                    Text(
+                      'Loan!',
+                      style: AppStyles.styleSemiBold20(
+                        context,
+                      ).copyWith(color: Colors.white),
+                    ),
+                    Icon(Icons.arrow_forward_ios, color: Colors.white,size: 18,),
+                  ],
+                ),
+              ],
             ),
           ),
         ],
