@@ -1,16 +1,37 @@
-# financial_dashboard
+# 💰 Financial Dashboard (Flutter)
 
-A new Flutter project.
+A modern, responsive **Financial Dashboard** built with **Flutter**, inspired by real-world fintech admin panels.  
+The dashboard adapts smoothly across **desktop, tablet, and mobile** screens with clean UI and modular architecture.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Features
 
-A few resources to get you started if this is your first Flutter project:
+- 📊 **Weekly Summary**
+- 💳 **Cards & Balance Overview**
+- 📈 **Outcome Statistics with Progress Bars**
+- 🧾 **Transaction History (Responsive Table → Mobile Cards)**
+- 🎯 **Goals Section**
+- 🔄 **New Transaction Flow**
+- 🧱 **Reusable & Modular Widgets**
+- 📱 **Fully Responsive (Mobile / Tablet / Desktop)**
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📱 Responsive Design
+
+| Platform | Layout |
+|--------|--------|
+| Desktop | Grid-based dashboard layout |
+| Tablet | Stacked adaptive layout |
+| Mobile | Vertical layout with compact cards |
+
+Responsive behavior is handled using:
+- `MediaQuery`
+- Custom breakpoints
+- Conditional widgets per screen size
+
+---
+
+## 🧠 Architecture
+
