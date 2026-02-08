@@ -11,15 +11,18 @@ class DeactivateCardItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Switch(
-          value: false,
+          value: true,
           onChanged: (value) {},
           activeColor: const Color(0xFF197BBD),
         ),
         const SizedBox(height: 4),
-        Text(
-          'Deactivate card',
-          style: AppStyles.styleRegular14(context)
-              .copyWith(color: const Color(0xFFAEAEAE)),
+        FittedBox(
+          fit: .scaleDown,
+          child: Text(
+            'Deactivate card',
+            style: AppStyles.styleRegular14(context)
+                .copyWith(color: const Color(0xFFAEAEAE)),
+          ),
         ),
       ],
     );

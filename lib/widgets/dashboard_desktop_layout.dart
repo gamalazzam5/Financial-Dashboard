@@ -2,6 +2,8 @@ import 'package:financial_dashboard/widgets/custom_drawer.dart';
 import 'package:financial_dashboard/widgets/weekly_sum_up_section.dart';
 import 'package:flutter/material.dart';
 
+import 'goals_section.dart';
+
 class DashboardDesktopLayout extends StatelessWidget {
   const DashboardDesktopLayout({super.key});
 
@@ -14,15 +16,17 @@ class DashboardDesktopLayout extends StatelessWidget {
       ),
       child:  Row(
         children: [
-          Expanded(child: CustomDrawer()),
-          Expanded(flex: 3, child: CustomScrollView(
+          Expanded(
+              child: CustomDrawer()),
+          Expanded(flex: 5, child: CustomScrollView(
         slivers:[
           SliverToBoxAdapter(
 
             child:  WeeklySumUpSection(),
           )
         ]
-        )),
+        ),),
+
         ],
       ),
     );

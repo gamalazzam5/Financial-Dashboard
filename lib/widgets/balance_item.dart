@@ -18,16 +18,23 @@ class BalanceItem extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        Text(
-          title,
-          style: AppStyles.styleBold18(context)
-              .copyWith(color: color, fontSize: 24),
+        FittedBox(
+
+         fit: .scaleDown,
+          child: Text(
+            title,
+            style: AppStyles.styleBold18(context)
+                .copyWith(color: color, fontSize: 24),
+          ),
         ),
         const SizedBox(height: 4),
-        Text(
-          subTitle,
-          style: AppStyles.styleRegular14(context)
-              .copyWith(color: const Color(0xFFAEAEAE)),
+        FittedBox(
+          fit: .scaleDown,
+          child: Text(
+            subTitle,
+            style: AppStyles.styleRegular14(context)
+                .copyWith(color: const Color(0xFFAEAEAE)),
+          ),
         ),
       ],
     );

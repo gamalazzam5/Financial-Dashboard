@@ -26,7 +26,10 @@ class CardsSection extends StatelessWidget {
             SizedBox(height: 12),
             Row(
               children: [
-                Expanded(child: CloudCashWithWeekly()),
+                Expanded(
+                    flex: 3,
+                    child: CloudCashWithWeekly()),
+                SizedBox(width: 12),
                 Expanded(child: BalanceSection()),
               ],
             ),

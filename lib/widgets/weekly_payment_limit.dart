@@ -37,19 +37,33 @@ class WeeklyPaymentLimitDesign extends StatelessWidget {
         const SizedBox(height: 8),
 
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              'Weekly payment limit',
-              style: AppStyles.styleRegular14(context)
-                  .copyWith(color: const Color(0xFFAEAEAE)),
+            Expanded(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  'Weekly payment limit',
+                  style: AppStyles.styleRegular14(context)
+                      .copyWith(color: const Color(0xFFAEAEAE)),
+                ),
+              ),
             ),
-            Text(
-              '\$350.60 / \$4000',
-              style: AppStyles.styleSemiBold16(context).copyWith(color: const Color(0xFF404040)),
+            const SizedBox(width: 12),
+            Expanded(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+
+                child: Text(
+                  '\$350.60 / \$4000',
+                  maxLines: 1,
+                  style: AppStyles.styleSemiBold16(context)
+                      .copyWith(color: const Color(0xFF404040)),
+                ),
+              ),
             ),
           ],
         ),
+
       ],
     );
   }

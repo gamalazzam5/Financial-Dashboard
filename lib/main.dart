@@ -1,8 +1,14 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:financial_dashboard/views/financial_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const FinancialDashboard());
+  runApp(
+      
+      DevicePreview(
+          enabled: true,
+          builder: (context) => const FinancialDashboard())
+      );
 }
 
 
@@ -12,6 +18,8 @@ class FinancialDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       home: FinancialView(),
     );
