@@ -1,9 +1,11 @@
-import 'package:financial_dashboard/widgets/custom_drawer.dart';
 import 'package:financial_dashboard/widgets/weekly_sum_up_section.dart';
+import 'package:financial_dashboard/widgets/weekly_sum_up_tablet.dart';
 import 'package:flutter/material.dart';
 
-class DashboardDesktopLayout extends StatelessWidget {
-  const DashboardDesktopLayout({super.key});
+import 'custom_drawer.dart';
+
+class DashboardTabletLayout extends StatelessWidget {
+  const DashboardTabletLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +18,9 @@ class DashboardDesktopLayout extends StatelessWidget {
         children: [
           Expanded(child: CustomDrawer()),
           Expanded(
-            flex: 5,
+            flex: 4,
             child: CustomScrollView(
-              slivers: [SliverToBoxAdapter(child: WeeklySumUpSection())],
+              slivers: [SliverToBoxAdapter(child: WeeklySumUpTablet())],
             ),
           ),
         ],

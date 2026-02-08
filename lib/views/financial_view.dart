@@ -1,4 +1,5 @@
 import 'package:financial_dashboard/widgets/adaptive_layout.dart';
+import 'package:financial_dashboard/widgets/dashboard_tablet_layout.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/dashboard_desktop_layout.dart';
@@ -12,7 +13,7 @@ class FinancialView extends StatelessWidget {
       backgroundColor: Colors.white,
       body: AdaptiveLayout(
         mobileLayout: (context) => SizedBox(),
-        tabletLayout: (context) => SizedBox(),
+        tabletLayout: (context) => DashboardTabletLayout(),
         desktopLayout: (context) => DashboardDesktopLayout(),
       ),
     );
