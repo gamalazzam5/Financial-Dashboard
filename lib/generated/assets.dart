@@ -11,11 +11,11 @@ class Assets {
   static const String imagesLoanEffect = 'assets/images/loan_effect.svg';
   static const String imagesOverview = 'assets/images/overview.svg';
   static const String imagesPerson = 'assets/images/person.svg';
-  static const String imagesPerson1 = 'assets/images/person1.svg';
-  static const String imagesPerson2 = 'assets/images/person2.svg';
-  static const String imagesPerson3 = 'assets/images/person3.svg';
-  static const String imagesPerson4 = 'assets/images/person4.svg';
-  static const String imagesPerson5 = 'assets/images/person5.svg';
+  static const String imagesPerson1 = 'assets/images/person1.png';
+  static const String imagesPerson2 = 'assets/images/person2.png';
+  static const String imagesPerson3 = 'assets/images/person3.png';
+  static const String imagesPerson4 = 'assets/images/person4.png';
+  static const String imagesPerson5 = 'assets/images/person5.png';
   static const String imagesProfile = 'assets/images/profile.svg';
   static const String imagesRenovation = 'assets/images/renovation.svg';
   static const String imagesSettings = 'assets/images/settings.svg';
