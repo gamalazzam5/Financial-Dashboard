@@ -29,9 +29,11 @@ class NewTransaction extends StatelessWidget {
               children: [
                 Expanded(child: CustomTextField()),
                 const SizedBox(width: 12),
-                CustomButton(
-                  text: 'Send the transfer',
-                  iconData: Icons.arrow_forward_ios,
+                Expanded(
+                  child: CustomButton(
+                    text: 'Send the transfer',
+                    iconData: Icons.arrow_forward_ios,
+                  ),
                 ),
               ],
             ),
